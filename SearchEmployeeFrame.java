@@ -46,7 +46,7 @@ public class SearchEmployeeFrame extends JFrame {
 
         mainPanel.add(titleLabel, BorderLayout.NORTH);
 
-        // Search panel
+        
         JPanel searchPanel = new JPanel(new FlowLayout());
 
         JLabel searchLabel = new JLabel("Search by ID or Name:");
@@ -66,7 +66,7 @@ public class SearchEmployeeFrame extends JFrame {
 
         mainPanel.add(searchPanel, BorderLayout.CENTER);
 
-        // Table
+    
         String[] columns = {
             "ID",
             "Name",
@@ -80,7 +80,6 @@ public class SearchEmployeeFrame extends JFrame {
 
         tableModel = new DefaultTableModel(columns, 0) {
 
-            @Override
             public boolean isCellEditable(int row, int column) {
                 return false;
             }
@@ -102,8 +101,7 @@ public class SearchEmployeeFrame extends JFrame {
 
         mainPanel.add(scrollPane, BorderLayout.SOUTH);
 
-        // Because BorderLayout CENTER is already used by search panel,
-        // use a separate container for search + table.
+       
         JPanel contentPanel = new JPanel(new BorderLayout(10, 10));
 
         contentPanel.add(searchPanel, BorderLayout.NORTH);
@@ -114,7 +112,7 @@ public class SearchEmployeeFrame extends JFrame {
 
         mainPanel.add(contentPanel, BorderLayout.CENTER);
 
-        // Bottom buttons
+        
         JPanel bottomPanel = new JPanel();
 
         JButton closeButton = new JButton("CLOSE");
